@@ -49,7 +49,7 @@ nav{
 }
 .s_nav{
     border: solid;
-    padding: 0;
+    padding: 0; 
     margin: 0;
     height: 50px;
     background-color: tomato;
@@ -73,4 +73,26 @@ nav{
     color:darkgray;
     background-color: white;
     border: none;
+}
+table  tr th{
+    width: 220px;
+    height: 50px;
+    border: solid;   
+    background-color: darkcyan;
+}
+table  tr td{
+    width: 220px;
+    height: 50px;
+    border: solid;   
+    text-align: center;
+}
+table{
+    height: auto;
+    width: auto;
+    /* background-color: darkgreen; */
+}
+.parent_table{
+   height: 445px;
+   width: auto;
+/* background-color: darkgoldenrod; */
 }
