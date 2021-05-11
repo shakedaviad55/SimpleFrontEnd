@@ -4,13 +4,14 @@ export class Table{
     constructor(){
         this.obj_customers=[
             {
-                status:"נמכר",
+                status:"נמכר!",
                 date_received:"16:44",
                 full_name:"טום קרוז",
                 phone:"0544676767",
                 group:"אשדוד",
                 reference:"אריאל יקימוב",
-                color:"green"
+                backgroundColor:"#41c1ad",
+                color:"white"
 
             },
             {
@@ -20,8 +21,8 @@ export class Table{
                 phone:"0544676767",
                 group:"חולון",
                 reference:"אריאל יקימוב",
-                color:"yellow"
-
+                backgroundColor:"#f9ce43fa",
+                color:"white"
 
             },
             {
@@ -31,7 +32,8 @@ export class Table{
                 phone:"0544676767",
                 group:'ראשל"צ',
                 reference:"אריאל יקימוב",
-                color:"white"
+                backgroundColor:"white",
+                color:"#030866"
 
             },
             {
@@ -41,7 +43,8 @@ export class Table{
             phone:"0544676767",
             group:"חולון",
             reference:"אריאל יקימוב",
-            color:"blue"
+            backgroundColor:"#369ceccf",
+            color:"white"
 
         },
         {
@@ -51,7 +54,8 @@ export class Table{
             phone:"0544676767",
             group:"חולון",
             reference:"אריאל יקימוב",
-            color:"red"
+            backgroundColor:"#f76565",
+            color:"white"
 
         },
         {
@@ -61,7 +65,8 @@ export class Table{
             phone:"0544676767",
             group:"נס ציונה",
             reference:"אריאל יקימוב",
-            color:"blue"
+            backgroundColor:"#369ceccf",
+            color:"white"
 
         }
 
@@ -70,6 +75,7 @@ export class Table{
         this.table.id="table";
         this.h=new Header(this.table);
         this.r=new Row(this.table);
+        this.createTable();
     }
     createTable(){
         this.h.createHeader();
@@ -78,16 +84,18 @@ export class Table{
     }
    
       updateTable(_target){
-    
-        var t=this.obj_customers
+        var t;
+        if(_target==="כל הקבוצות"||_target=="הכל")
+            t=this.obj_customers;
+        else
+             t=this.obj_customers
             .filter(item=>item.status==_target||item.group==_target);
-            this.getTable().innerHTML=""
-            this.h.createHeader();
-            if(_target==="כל הקבוצות"||_target=="הכל")
-                this.r.createRow(this.obj_customers);
-            else this.r.createRow(t);     
-           parent_table.appendChild(this.table);
-
+        
+        this.getTable().innerHTML=""
+        this.h.createHeader();    
+        this.r.createRow(t);     
+        parent_table.appendChild(this.table);   
+        
     }
     getTable(){
         return document.getElementById("table");

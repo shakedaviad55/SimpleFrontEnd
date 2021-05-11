@@ -15,7 +15,13 @@ export class Header{
         this.list_h.forEach(item=>{
             let th=document.createElement("th");
             th.innerHTML=item;
-            tr.appendChild(th);
+            
+            if(item=="הופנה על ידי")
+                th.className="table_egdes_end";
+            else if(item=="סטטוס")
+                th.className="table_egdes_start";
+
+                tr.appendChild(th);
             this.parent.appendChild(tr);
         });
     }

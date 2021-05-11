@@ -4,7 +4,8 @@ export class Buttons{
     var bb= new Button(f_nav,"הצג","showbtn");
     bb.createBtnFirstSection();
       
-    var bt= new Button(s_nav,["לא נמכר","קמפיין הלבנה","חולון"],"s_btn fa fa-close");bt.createBtnSecondSection();
+    var bt= new Button(s_nav,["לא נמכר","קמפיין הלבנה","חולון"],"s_btn fa fa-close");
+    bt.createBtnSecondSection();
     }
 
 

@@ -1,22 +1,19 @@
-import { Table } from "../table/table.js";
-
-// var table=new Table();
-// table.createTable();
 
 export class Selectes{
     constructor(){
         this.obj_select=[
             {all:"הכל", not_sold:"לא נמכר",sold:"נמכר",received:"התקבל",repeat:"שיחה חוזרת"}
-            ,{source:"מקור הליד"}
+            ,{source:" כל המקורות"}
             ,{all_group:"כל הקבוצות",ashdod:"אשדוד",holon:"חולון",rishonlezion:'ראשל"צ',nessziona:"נס ציונה"}
         ];
         this.array_label=["סטטוס","מקור הליד","קבוצה"];
         this.parent=f_nav;
+        this.createSelect();
         
     }
      createSelect(){
             for (var i=0;i<3;i++){
-                debugger
+                
                 var box=document.createElement("div");
                 this.parent.appendChild(box);
                 var l=document.createElement("label");
@@ -25,17 +22,9 @@ export class Selectes{
                 te.run();
                
                  if(i==0){
-                     //box.innerHTML+="</br>";
                      var br=document.createElement("br");
                      var te1=new Select(box,br,{price:"מחיר"});
                      te1.run()
-                //     var _price=document.createElement("select");
-                //     var _op_price=document.createElement("option");
-                //     _op_price.innerHTML="מחיר";
-                //     _op_price.value="price";
-                //     _price.appendChild(_op_price);
-                //     box.appendChild(_price);
-                    
                  }  
               }
         }
@@ -57,10 +46,8 @@ export class Selectes{
             _option.innerHTML=value;
             this._select.appendChild(_option);
             this._select.onchange =function(e){
-                debugger
                let target=this.options[e.target.value];
-               globalThis._table.updateTable(target)
-        
+               globalThis._table.updateTable(target);
             }.bind(this)
           
         }

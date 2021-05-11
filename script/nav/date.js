@@ -4,6 +4,7 @@
         this.date_label=["מתאריך","עד תאריך"];
         this.defult_date=["2019-05-30","2019-07-20"];
         this.parent=f_nav;
+        this.createDate();
 }
     createDate(){
         for (var i=0;i<2;i++){
