@@ -94,7 +94,7 @@ export class Table{
         this.getTable().innerHTML=""
         this.h.createHeader();    
         this.r.createRow(t);     
-        parent_table.appendChild(this.table);   
+        //parent_table.appendChild(this.table);   
         
     }
     getTable(){

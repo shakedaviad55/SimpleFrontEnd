@@ -20,7 +20,6 @@ select{
     border-bottom: 1px solid;
     background: #ebeff2bf;
     color: gray;
-    /* opacity: 0.8; */
     margin-top: 5px;
     font: 501 15px Arial;
     margin-bottom: 6px;
@@ -73,7 +72,6 @@ nav{
 
 }
 .s_nav{
-   
     min-height: inherit;
 }
 .s_nav div{ 
@@ -114,12 +112,10 @@ table  tr td{
 table{
     height: auto;
     width: auto;
-    /* background-color: darkgreen; */
 }
 .parent_table{
    height: 445px;
    width: auto;
-/* background-color: darkgoldenrod; */
 }
 
 .table_egdes_start{

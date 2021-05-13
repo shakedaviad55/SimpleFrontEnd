@@ -21,7 +21,7 @@ export class Header{
             else if(item=="סטטוס")
                 th.className="table_egdes_start";
 
-                tr.appendChild(th);
+            tr.appendChild(th);
             this.parent.appendChild(tr);
         });
     }

@@ -1,6 +1,5 @@
  export class Date{
-    constructor(_value){
-        this.value=_value;
+    constructor(){
         this.date_label=["מתאריך","עד תאריך"];
         this.defult_date=["2019-05-30","2019-07-20"];
         this.parent=f_nav;

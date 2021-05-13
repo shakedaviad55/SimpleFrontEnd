@@ -3,7 +3,6 @@ import {Table} from './table/table.js'
 
 
 window.onload=()=>{ 
-  
   new Nav();
   globalThis._table=new Table();
 }
