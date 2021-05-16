@@ -1,4 +1,13 @@
+/**
+ * This class produces the header of the table
+ * 
+ */
 export class Header{
+    /**
+     * 
+     * @param {string} _parent - Parent of this header  
+     * list_h - Values of the header 
+    */
     constructor(_parent){
         this.parent=_parent;
         this.list_h=[
@@ -10,6 +19,9 @@ export class Header{
              "הופנה על ידי"   
         ];        
     }
+    /**
+     * Create the table header
+     */
     createHeader(){
         let tr=document.createElement("tr"); 
         this.list_h.forEach(item=>{

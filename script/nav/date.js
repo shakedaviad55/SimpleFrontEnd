@@ -1,11 +1,21 @@
- export class Date{
+/**
+ * This class produces inputs with date type
+ * date_label -The values of labels
+ * defult_date - Default date values
+ * parent- The parent of dates f_nav (first nav)
+ *  
+ * */
+export class Date{
     constructor(){
         this.date_label=["מתאריך","עד תאריך"];
         this.defult_date=["2019-05-30","2019-07-20"];
         this.parent=f_nav;
-        this.createDate();
+        this.init();
 }
-    createDate(){
+/**
+ * Initializing this date
+ */
+    init(){
         for (var i=0;i<2;i++){
             var box=document.createElement("div");
             this.parent.appendChild(box);

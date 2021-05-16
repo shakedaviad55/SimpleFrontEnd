@@ -1,8 +1,19 @@
+/**
+ * This class produces the rows of the table
+ */
 export class Row{
+ /**
+  * 
+  * @param {string} _parent-Parent of this rows   
+  */   
     constructor(_parent){
         this.parent=_parent;
        
     }
+    /**
+     * Create the table rows
+     * @param {Array} _customers- The values displayed in the table 
+     */
     createRow(_customers){
         _customers.forEach(item=>{
             let tr=document.createElement("tr"); 

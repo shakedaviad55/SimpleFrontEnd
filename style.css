@@ -5,6 +5,7 @@
     direction: rtl;
 
 }
+
 body{
     width: auto;
     height: auto;
@@ -14,6 +15,9 @@ body{
     margin-top: 5px;
     
     
+}
+#select0,#select2,.showbtn:hover{
+    cursor: pointer;
 }
 select{
     border: none;
@@ -62,6 +66,7 @@ nav{
     float: left;
     padding-right: 10px;
 }
+
 .showbtn{
     font-size: 28px;
     color: #030866;
